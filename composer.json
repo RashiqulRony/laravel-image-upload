@@ -1,6 +1,6 @@
 {
     "name": "rashiqulrony/laravel-image-upload",
-    "description": "Laravel image & file upload package with s3 and using image intervention",
+    "description": "Laravel image & file upload package with S3 support using Intervention Image.",
     "keywords": [
         "RashiqulRony",
         "Laravel Image Upload",
@@ -11,7 +11,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "rashiqulrony",
+            "name": "Rashiqul Rony",
             "email": "rashiqulrony@gmail.com"
         }
     ],
@@ -22,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Rashiqulrony\\LaravelImageUpload\\": "src"
+            "Rashiqulrony\\LaravelImageUpload\\": "src/"
         }
     },
     "extra": {
         "laravel": {
-            "providers" : [
+            "providers": [
                 "Rashiqulrony\\LaravelImageUpload\\Providers\\AppServiceProvider"
             ]
         }
