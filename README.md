@@ -1,7 +1,7 @@
 ## Media Uploader
 
 
-`mediauploader` is a simple file-handling package for `Laravel` that provides various options for managing files, including image uploads, file uploads, WebP uploads, base64 image uploads, image uploads from URLs, and Google image content uploads. The package currently supports `public`, `local`, and `s3` storage (note: only publicly accessible `S3` buckets are supported).
+`imageupload` is Basic image upload and thumbnail management package for laravel (version: laravel/framework: ^8.0|^9.0|^10.0|^11.0|^12.0).
 
 It also includes file and image preview functionality.
 
@@ -21,7 +21,7 @@ You should publish the config file with:
 php artisan vendor:publish --provider="Rashiqulrony\LaravelImageUpload\Providers\AppServiceProvider" --tag=config
 ```
 
-In `config/imageupload.php` config file you should set `mediauploader` global path.
+In `config/imageupload.php` config file you should set `imageupload` global path.
 
 ```php
 return [
@@ -70,19 +70,6 @@ return [
 
     'image_thumb_height' => 300,
     'image_thumb_width' => 300,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Fake Image Url
-    |--------------------------------------------------------------------------
-    |
-    | fake_image_url , if you specify a fake image path or url here. the entire package will use
-    | this image when there is no image found. or you can specify the fake image in the
-    | function parameter as well.
-    | Example: 'fake_image_url' => 'images/fake.png' or 'fake_image_url' => 'https://example.com/images/fake.png,
-    */
-
-    'fake_image_url' => null,
 
     /*
     |--------------------------------------------------------------------------
