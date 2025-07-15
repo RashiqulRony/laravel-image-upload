@@ -58,9 +58,15 @@ class Uploader
         }
 
         if (self::$thumb) {
-            self::$_imageManager->read(self::$storageFolder . self::$originalPath . $fileName)
-                ->resize(config('imageupload.image_thumb_width'), config('imageupload.image_thumb_height'))
-                ->save(self::$storageFolder . self::$thumbPath . '/' . $fileName);
+            if (!empty(self::$thumbResize)) {
+                self::$_imageManager->read(self::$storageFolder . self::$originalPath . $fileName)
+                    ->resize(self::$thumbResize[0], self::$thumbResize[1])
+                    ->save(self::$storageFolder . self::$thumbPath . '/' . $fileName);
+            } else {
+                self::$_imageManager->read(self::$storageFolder . self::$originalPath . $fileName)
+                    ->resize(config('imageupload.image_thumb_width'), config('imageupload.image_thumb_height'))
+                    ->save(self::$storageFolder . self::$thumbPath . '/' . $fileName);
+            }
         }
 
         return $data;
