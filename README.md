@@ -3,7 +3,12 @@
 [![License](https://poser.pugx.org/rashiqulrony/laravel-image-upload/license)](https://packagist.org/packages/rashiqulrony/laravel-image-upload)
 ## Media Uploader
 
-`imageupload` is Basic image upload and thumbnail management package for laravel (version: laravel/framework: ^8.0|^9.0|^10.0|^11.0|^12.0).
+`imageupload` is a basic image upload and thumbnail management package for Laravel.
+
+## Requirements
+
+- PHP 8.3 through 8.5
+- Laravel 10, 11, 12, or 13
 
 It also includes file and image preview functionality.
 
