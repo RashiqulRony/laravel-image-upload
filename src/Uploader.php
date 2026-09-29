@@ -268,6 +268,10 @@ class Uploader
      */
     public static function mediaDeleteWithPath($fileWithPath, $thumbWithPath = null)
     {
+
+        $fileWithPath = Str::after($fileWithPath, self::$storageFolder);
+        $thumbWithPath = $thumbWithPath ? Str::after($thumbWithPath, self::$storageFolder) : null;
+
         if (Storage::exists($fileWithPath)) {
             Storage::delete($fileWithPath);
             if ($thumbWithPath) {
