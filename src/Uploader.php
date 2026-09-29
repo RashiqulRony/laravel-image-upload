@@ -47,7 +47,9 @@ class Uploader
             'size' => $file->getSize(),
             'ext' => $file->getClientOriginalExtension(),
             'url' => url(self::$storageFolder . self::$originalPath . $fileName),
+            'fileFullPath' => self::$storageFolder . self::$originalPath . $fileName,
             'thumbUrl' => self::$thumb ? url(self::$storageFolder . self::$originalPath . 'thumb/' . $fileName) : null,
+            'thumbFullPath' => self::$thumb ? self::$storageFolder . self::$originalPath . 'thumb/' . $fileName : null,
         ];
 
         if (!empty(self::$imageResize)) {
@@ -175,6 +177,7 @@ class Uploader
         return [
             'name' => $imageName,
             'url' => url(self::$storageFolder . $realPath . $imageName),
+            'fileFullPath' => self::$storageFolder . $realPath . $imageName,
         ];
     }
 
@@ -198,6 +201,7 @@ class Uploader
         return [
             'name' => $name,
             'url' => url(self::$storageFolder . $realPath . $name),
+            'fileFullPath' => self::$storageFolder . $realPath . $name,
         ];
     }
 

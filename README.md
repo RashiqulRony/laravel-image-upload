@@ -134,7 +134,9 @@ Response
     "size": 24418,
     "ext": "jpg",
     "url": "http://127.0.0.1:8000/storage/upload/1744802578-60164bb368db6.jpg",
-    "thumbUrl": "http://127.0.0.1:8000/storage/upload/thumb/1744802578-60164bb368db6.jpg"
+    "fileFullPath": "storage/upload/1744802578-60164bb368db6.jpg",
+    "thumbUrl": "http://127.0.0.1:8000/storage/upload/thumb/1744802578-60164bb368db6.jpg",
+    "thumbFullPath": "storage/upload/thumb/1744802578-60164bb368db6.jpg"
 }
 ```
 
@@ -157,7 +159,8 @@ Response
     "originalName": "Web 1st slide Without Text new 04-25.mp4",
     "size": 709821,
     "ext": "mp4",
-    "url": "http://127.0.0.1:8000/storage/upload/123.mp4"
+    "url": "http://127.0.0.1:8000/storage/upload/123.mp4",
+    "fileFullPath": "storage/upload/123.mp4"
 }
 ```
 
@@ -180,7 +183,8 @@ Response
     "originalName": "Registration_Form.pdf",
     "size": 1082270,
     "ext": "pdf",
-    "url": "http://127.0.0.1:8000/storage/upload/123.pdf"
+    "url": "http://127.0.0.1:8000/storage/upload/123.pdf",
+    "fileFullPath": "storage/upload/123.pdf",
 }
 ```
 
@@ -201,7 +205,8 @@ Response
 ```
 {
     "name": "image.png",
-    "url": "http://127.0.0.1:8000/storage/upload/image.png"
+    "url": "http://127.0.0.1:8000/storage/upload/image.png",
+    "fileFullPath": "storage/upload/image.png"
 }
 ```
 
