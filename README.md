@@ -227,6 +227,23 @@ Response
 return true or false;
 ```
 
+**Using Controller for Delete Media or Any File with File Full Path**
+```
+/**
+* Delete a file and optionally its thumbnail.
+*
+* @param string $file File name.
+* @param string $path File path.
+* @param bool $thumb Whether to delete the thumbnail.
+* @return bool Success status.
+*/
+return Uploader::mediaDeleteWithPath($fileWithPath, $thumbWithPath);
+```
+Response
+```
+return true or false;
+```
+
 **Using Controller for Remove a Directory or Folder**
 ```
 /**

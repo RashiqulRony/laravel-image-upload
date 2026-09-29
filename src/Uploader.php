@@ -260,6 +260,25 @@ class Uploader
     }
 
     /**
+     * Delete a file and optionally its thumbnail.
+     *
+     * @param string $fileWithPath Full path with file name.
+     * @param string $thumbWithPath Full path with thumbnail file name.
+     * @return bool Success status.
+     */
+    public static function mediaDeleteWithPath($fileWithPath, $thumbWithPath = null)
+    {
+        if (Storage::exists($fileWithPath)) {
+            Storage::delete($fileWithPath);
+            if ($thumbWithPath) {
+                Storage::delete($thumbWithPath);
+            }
+            return true;
+        }
+        return false;
+    }
+
+    /**
      * Delete an entire folder.
      *
      * @param string $path Folder path.
